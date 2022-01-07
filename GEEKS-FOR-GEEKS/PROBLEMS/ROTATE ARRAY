@@ -1,0 +1,11 @@
+//USING REVERSE FUNCTION IN C++ APPROPRIATELY WE CAN SOLVE IT IN 
+TIME COMPLEXITY O(N)
+SPACE COMPLEXITY O(1)
+void rotateArr(int arr[], int d, int n)
+{
+  reverse(arr,arr+n);
+  reverse(arr+n-d,arr+n);
+  reverse(arr,arr+n-d);
+
+}
+            
