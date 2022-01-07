@@ -1,0 +1,33 @@
+
+<-----------------------------------------------------------------BINARY SEARCH------------------------------------------------------------------------------------------------>
+TIME -O(LOGN)
+SPACE-O(1)
+
+class Solution{
+public:
+	
+	int findMaximum(int arr[], int n) {
+	    // code here
+	    int l=0;
+	    int e=n-1;
+	        while(l<=e){
+	            int mid=(l+e)/2;
+	            
+	        
+	        if(arr[mid]>arr[mid-1]&&arr[mid]>arr[mid+1]){
+	            return arr[mid];
+	            
+	        }
+	        else{
+	            
+	            if(arr[mid]<arr[mid-1]){
+	                e=mid-1;
+	            }
+	            else{
+	                l=mid+1;
+	            }     
+	        }
+	       }
+	    
+	}
+};
