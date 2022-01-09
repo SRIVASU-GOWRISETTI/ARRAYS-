@@ -1,0 +1,35 @@
+long long maxArea(long long a[], int len)
+{
+ 
+    long long l=0;
+    long long r=len-1;
+    long long max=0;
+    while(l<r){
+        
+    
+    
+    long long width=r-l;
+    long long height=min(a[l],a[r]);
+    long long area= width*height;
+    if(area>max){
+    
+        max=area;
+        
+    }
+    if(a[l]<a[r]){
+        
+        l++;
+    }
+    else if(a[r]<a[l]){
+        r--;
+    }
+    else{
+        l++;
+        r--;
+    }
+    }
+        
+        
+        
+    return max;
+}
