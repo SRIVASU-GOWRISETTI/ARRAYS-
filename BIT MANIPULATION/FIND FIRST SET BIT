@@ -1,0 +1,30 @@
+APPROACH 1:
+HERE TRY TO BE VERY CLEAR HANDLING ALL THE BOUNDARY CASES EFFECTIVELY
+I.E 
+IF(N==0){
+RETURN 0;
+}
+class Solution
+{
+    public:
+    //Function to find position of first set bit in the given number.
+    unsigned int getFirstSetBit(int n)
+    {
+        unsigned int count=1;
+        if(n==0){
+            return 0;
+        }
+    while(n){
+            if(n&1==1){
+             return count;
+            }
+        else{
+            n=n>>1;
+            count++;
+        } 
+        }
+    }
+};
+
+APPROACH 2: ALL EVEN NUMBERS WILL HAVE 0 AT END IN THEIR BINARY REPRESENTATION:
+SO WE WILL KEEP ON INCREASING COUNT WHEN WE SEE EVEN NUMBERS TO REDUCE THE TIME 
