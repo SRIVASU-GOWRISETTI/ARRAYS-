@@ -1,0 +1,40 @@
+APPROACH: CHECK THE LENGTH AND IF LENGTHS NOT EQUAL RETURN FALSE;
+ELSE CHECK EVERY VALUE POINT BY POINT NODE BY NODE..
+IF NO MATCH THEN return false
+else return true
+
+bool areIdentical(struct Node *head1, struct Node *head2)
+{
+    
+    int c=0,d=0;
+    
+    struct Node * a=head1;
+    struct Node *b=head2;
+    while(a!=NULL){
+        c++;
+        a=a->next;
+    }
+    while(b!=NULL){
+        d++;
+        b=b->next;
+    }
+    if(c!=d){
+        return false;
+    }
+    a=head1;
+    b=head2;
+    
+    while(a!=NULL&&b!=NULL){
+        if(a->data!=b->data){
+            return false;
+        }
+        else{
+        a=a->next;
+        b=b->next;
+    
+        }
+        }
+  
+    return true;
+    
+}
