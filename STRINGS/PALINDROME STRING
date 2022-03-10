@@ -1,0 +1,25 @@
+APPROACH 1 O(N/2) TIME
+class Solution{
+public:	
+	
+	
+	int isPalindrome(string S)
+	{
+	  int n =S.size();
+	  int l=0;
+	  int h=n-1;
+	  while(l<=h){
+	      
+	      if(S[l]==S[h]){
+	          
+	          l++;
+	          h--;
+	      }
+	      else{
+	      return 0;
+	      }	      
+	  }
+	  return 1;
+	}
+
+};
